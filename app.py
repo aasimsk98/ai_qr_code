@@ -1,7 +1,3 @@
-# Imports necessary for the application
-# Make sure to install these libraries before running the code:
-# pip install streamlit qrcode numpy opencv-python Pillow pyzbar
-
 import streamlit as st
 import io
 from utils import split_and_combine
@@ -48,7 +44,7 @@ Get started by choosing an option from the *menu on the left*, and let’s trans
 """)
 
         st.subheader("         Create. Customize. Decode.        ")
-        #st.image("https://cdn.qrcode-ai.com/gallery/Snowy-Temples-Harmony.png",  width= 800, use_container_width=False, caption="Create. Customize. Decode.")  # Replace URL with your preferred image if necessary
+       
 
     elif choice == "Generate QR Code":
         st.subheader("Generate a QR Code")
@@ -267,7 +263,7 @@ Get started by choosing an option from the *menu on the left*, and let’s trans
                     fake = Faker()
                     random_subdirectory_name = f"{fake.word()}"
                     st.write(f"Images will be saved to the folder `{random_subdirectory_name}`")
-                    random_subdirectory_path = os.path.join(os.getcwd(), 'C:/Work/Project/Major/qr/control-net-hacking-main/control-net-hacking-main/images', random_subdirectory_name)
+                    random_subdirectory_path = os.path.join(os.path.dirname(__file__),'images', random_subdirectory_name)
                     os.makedirs(random_subdirectory_path)
 
                     starting_image_path = os.path.join(random_subdirectory_path, "_starting_image.png")
@@ -341,7 +337,7 @@ Get started by choosing an option from the *menu on the left*, and let’s trans
                     fake = Faker()
                     random_subdirectory_name = f"{fake.word()}"
                     st.write(f"Images will be saved to the folder `{random_subdirectory_name}`")
-                    random_subdirectory_path = os.path.join(os.getcwd(),'C:/Work/Project/Major/qr/control-net-hacking-main/control-net-hacking-main/images', random_subdirectory_name)
+                    random_subdirectory_path = os.path.join(os.path.dirname(__file__),'images', random_subdirectory_name)
                     os.makedirs(random_subdirectory_path)
 
                     starting_image_path = os.path.join(random_subdirectory_path, "_starting_image.png")
